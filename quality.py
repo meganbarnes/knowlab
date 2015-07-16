@@ -22,7 +22,7 @@ print "starting"
 for fil in files:
     print fil
     lines = set(open(fil, 'r').readlines())
-    random.sample(lines, 400)
+    lines = random.sample(lines, 400)
     for line in lines:
         line = line.strip()
         names.append(line)
