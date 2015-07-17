@@ -37,10 +37,10 @@ for fil in files:
 	out_names = open('names_'+fil[21:24]+'.txt', 'w')
 	out_soups = open('soups_'+fil[21:24]+'.csv', 'wb')
 	wb = csv.writer(out_soups)
-    
-    for item in names:
-    	out_names.write("%s\n" % item)
-    for item in soups:
-    	wb.writerow([item])
-    out_names.close()
-    out_soups.close()
+	
+	for item in names:
+		out_names.write("%s\n" % item)
+	for item in soups:
+		wb.writerow([item])
+	out_names.close()
+	out_soups.close()
