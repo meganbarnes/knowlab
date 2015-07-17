@@ -37,6 +37,6 @@ for fil in files:
 	out_soups = open('soups_'+fil[21:24]+'.txt', 'w')
 
 	for item in names:
-    	out_names.write("%s\n" % item)
+		out_names.write("%s\n" % item)
 	for item in soups:
-    	out_soups.write("%s\n" % item)
+		out_soups.write("%s\n" % item)
