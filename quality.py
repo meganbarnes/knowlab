@@ -15,11 +15,12 @@ base_url = 'https://en.wikipedia.org/wiki/'
 
 files = ['graded_files_updated/featured_articles.txt', 'graded_files_updated/a-class_articles.txt', 'graded_files_updated/good_articles.txt', 'graded_files_updated/b-class_articles.txt', 'graded_files_updated/c-class_articles.txt', 'graded_files_updated/start-class_articles.txt', 'graded_files_updated/stub-class_articles.txt']
 
-names = []
-soups = []
+
 print "starting"
 
 for fil in files:
+	names = []
+	soups = []
     print fil
     lines = set(open(fil, 'r').readlines())
     lines = random.sample(lines, 700)
@@ -32,10 +33,10 @@ for fil in files:
         else:
             soups.append(soup)
       
-out_names = open('names.txt', 'w')
-out_soups = open('soups.txt', 'w')
+	out_names = open('names_'+fil[21:24]+'.txt', 'w')
+	out_soups = open('soups_'+fil[21:24]+'.txt', 'w')
 
-for item in names:
-    out_names.write("%s\n" % item)
-for item in soups:
-    out_soups.write("%s\n" % item)
+	for item in names:
+    	out_names.write("%s\n" % item)
+	for item in soups:
+    	out_soups.write("%s\n" % item)
