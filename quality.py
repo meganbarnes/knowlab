@@ -40,3 +40,5 @@ for fil in files:
 		out_names.write("%s\n" % item)
 	for item in soups:
 		out_soups.write("%s\n" % item)
+	out_names.close()
+	out_soups.close()
