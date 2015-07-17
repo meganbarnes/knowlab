@@ -23,15 +23,15 @@ for fil in files:
 	soups = []
 	print fil
 	lines = set(open(fil, 'r').readlines())
-    lines = random.sample(lines, 700)
-    for line in lines:
-        line = line.strip()
-        names.append(line)
-        soup = get_soup(base_url+line)
-        if soup is None:
-            continue
-        else:
-            soups.append(soup)
+	lines = random.sample(lines, 700)
+	for line in lines:
+		line = line.strip()
+		names.append(line)
+		soup = get_soup(base_url+line)
+		if soup is None:
+			continue
+		else:
+			soups.append(soup)
       
 	out_names = open('names_'+fil[21:24]+'.txt', 'w')
 	out_soups = open('soups_'+fil[21:24]+'.txt', 'w')
