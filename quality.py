@@ -21,8 +21,8 @@ print "starting"
 for fil in files:
 	names = []
 	soups = []
-    print fil
-    lines = set(open(fil, 'r').readlines())
+	print fil
+	lines = set(open(fil, 'r').readlines())
     lines = random.sample(lines, 700)
     for line in lines:
         line = line.strip()
